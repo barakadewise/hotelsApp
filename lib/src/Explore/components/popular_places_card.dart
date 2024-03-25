@@ -12,9 +12,15 @@ class PopularPlacesCard extends StatelessWidget {
     return Container(
         width: 290,
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(25),
-        ),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(25),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                blurRadius: 3, // Blur radius
+                offset: const Offset(0, 1), // Offset
+              ),
+            ]),
         child: Stack(
           children: [
             Column(

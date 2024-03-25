@@ -37,7 +37,6 @@ class _HomepageState extends State<Homepage> {
             setState(() {
               currentIndexPage = index;
             });
-            print(index);
           },
           showSelectedLabels: true,
           showUnselectedLabels: true,
@@ -52,7 +51,7 @@ class _HomepageState extends State<Homepage> {
             BottomNavigationBarItem(
                 icon: Icon(CupertinoIcons.search), label: 'Explore'),
             BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.search), label: 'Reservation'),
+                icon: Icon(Icons.book_outlined), label: 'Reservation'),
             BottomNavigationBarItem(
                 icon: Icon(CupertinoIcons.bookmark), label: 'Saved'),
             BottomNavigationBarItem(

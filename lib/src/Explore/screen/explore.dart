@@ -71,38 +71,41 @@ class Explore extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             child: Container(
-                              // decoration: BoxDecoration(boxShadow: [
-                              //   BoxShadow(
-                              //     color: Colors.black
-                              //         .withOpacity(0.2), // Shadow color
-                              //     spreadRadius: 0.1, // Spread radius
-                              //     blurRadius: 0.11, // Blur radius
-                              //     offset: const Offset(0, 1), // Offset
-                              //   ),
-                              // ]),
+                              decoration:  BoxDecoration(
+                                borderRadius: BorderRadius.circular(25),
+                                boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.05),
+                                  blurRadius: 0.1, // Blur radius
+                                  offset: const Offset(0, 1), // Offset
+                                ),
+                               
+                              ]),
                               width: double.infinity,
                               height: 70,
-                              child: TextFormField(
-                                style: const TextStyle(fontSize: 18),
-                                decoration: InputDecoration(
-                                  fillColor: Colors.white,
-                                  filled: true,
-                                  hintText: 'What are  you searching for?',
-                                  hintStyle: const TextStyle(fontSize: 15),
-                                  contentPadding: const EdgeInsets.all(15),
-                                  enabledBorder: OutlineInputBorder(
-                                      borderSide:
-                                          const BorderSide(color: Colors.white),
-                                      borderRadius:
-                                          BorderRadius.circular(25.0)),
-                                  focusedBorder: OutlineInputBorder(
-                                      borderSide:
-                                          const BorderSide(color: Colors.white),
-                                      borderRadius:
-                                          BorderRadius.circular(25.0)),
-                                  suffixIcon: const Icon(
-                                    CupertinoIcons.search,
-                                    color: Color(0xffCB997E),
+                              child: Center(
+                                child: TextFormField(
+                                  style: const TextStyle(fontSize: 18),
+                                  decoration: InputDecoration(
+                                    fillColor: Colors.white,
+                                    filled: true,
+                                    hintText: 'What are  you looking for?',
+                                    hintStyle: const TextStyle(fontSize: 15),
+                                    contentPadding: const EdgeInsets.all(15),
+                                    enabledBorder: OutlineInputBorder(
+                                        borderSide:
+                                            const BorderSide(color: Colors.white),
+                                        borderRadius:
+                                            BorderRadius.circular(25.0)),
+                                    focusedBorder: OutlineInputBorder(
+                                        borderSide:
+                                            const BorderSide(color: Colors.white),
+                                        borderRadius:
+                                            BorderRadius.circular(25.0)),
+                                    suffixIcon: const Icon(
+                                      CupertinoIcons.search,
+                                      color: Color(0xffCB997E),
+                                    ),
                                   ),
                                 ),
                               ),
