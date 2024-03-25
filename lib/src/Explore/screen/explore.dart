@@ -1,20 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:myapp/src/home/models/popular_places_model.dart';
 import '../components/category_card.dart';
 import '../components/popular_places_card.dart';
+import '../models/popular_places_model.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+class Explore extends StatelessWidget {
+  const Explore({super.key});
 
-  @override
-  State<Homepage> createState() => _HomepageState();
-}
-
-class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
+  
     final List<String> category = [
       'Restaurant',
       'Pub',
@@ -34,13 +29,13 @@ class _HomepageState extends State<Homepage> {
                   Container(
                     decoration: const BoxDecoration(color: Color(0xff070F2B)),
                     child: SizedBox(
-                      height: size.height * 0.4,
+                      height: size.height * 0.35,
                       width: size.width,
                       child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 170,
+                            height: 140,
                           ),
                           Padding(
                             padding: EdgeInsets.only(left: 20),
@@ -67,7 +62,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ),
                   Positioned(
-                    top: size.height * 0.36,
+                    top: size.height * 0.31,
                     child: Column(
                       children: [
                         SizedBox(
@@ -115,7 +110,7 @@ class _HomepageState extends State<Homepage> {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 8,
                         ),
                         SizedBox(
                             height: 60,
@@ -151,7 +146,7 @@ class _HomepageState extends State<Homepage> {
                               ],
                             )),
                         const SizedBox(
-                          height: 10,
+                          height: 8,
                         ),
                         SizedBox(
                           width: size.width,
@@ -214,10 +209,11 @@ class _HomepageState extends State<Homepage> {
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  const SizedBox(height: 70,)
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -10,7 +10,7 @@ class PopularPlacesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: 300,
+        width: 290,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(25),
@@ -20,7 +20,7 @@ class PopularPlacesCard extends StatelessWidget {
             Column(
               children: [
                 SizedBox(
-                    width: 300,
+                    width: 290,
                     height: 115,
                     child: ClipRRect(
                       borderRadius: const BorderRadius.only(
