@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/src/Explore/components/details_screen.dart';
 import '../components/category_card.dart';
 import '../components/popular_places_card.dart';
 import '../models/popular_places_model.dart';
@@ -189,23 +190,29 @@ class Explore extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              SizedBox(
-                                width: size.width,
-                                height: 220,
-                                child: ListView.builder(
-                                    scrollDirection: Axis.horizontal,
-                                    itemCount: popularPlacelist.length,
-                                    itemBuilder:
-                                        (BuildContext context, int index) {
-                                      return Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 5, vertical: 5),
-                                        child: PopularPlacesCard(
-                                            imageName: popularPlacelist[index]
-                                                .imageName,
-                                            rate: popularPlacelist[index].rate),
-                                      );
-                                    }),
+                              
+                              InkWell(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (_)=> const DetailsPage()));
+                                },
+                                child: SizedBox(
+                                  width: size.width,
+                                  height: 220,
+                                  child: ListView.builder(
+                                      scrollDirection: Axis.horizontal,
+                                      itemCount: popularPlacelist.length,
+                                      itemBuilder:
+                                          (BuildContext context, int index) {
+                                        return Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 5, vertical: 5),
+                                          child: PopularPlacesCard(
+                                              imageName: popularPlacelist[index]
+                                                  .imageName,
+                                              rate: popularPlacelist[index].rate),
+                                        );
+                                      }),
+                                ),
                               )
                             ],
                           ),
